@@ -12,15 +12,15 @@ module.exports = function(grunt) {
                 options: { livereload: true },
             },
             coffee: {
-                files: ['app/coffee/**/*.coffee'],
+                files: ['coffee/**/*.coffee'],
                 tasks: ['coffee:compile']
             },
             jade: {
-                files: ['app/jade/**/*.jade'],
+                files: ['jade/**/*.jade'],
                 tasks: ['jade:compile']
             },
             stylus: {
-                files: ['app/stylus/**/*.styl'],
+                files: ['stylus/**/*.styl'],
                 tasks: ['stylus:compile']
             }
         },
@@ -31,15 +31,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: "app/coffee/",
+                    cwd: "coffee/",
                     src: ['**/*.coffee'],
-                    dest: 'app/static/js',
-                    ext: '.js'
-                },{
-                    expand: true,
-                    cwd: "app/coffee/controllers/",
-                    src: ['**/*.coffee'],
-                    dest: 'app/static/js/controllers',
+                    dest: 'build',
                     ext: '.js'
                 }]
             }
@@ -68,5 +62,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('server', ['shell:runserver', 'watch'])
+    grunt.registerTask('build', ['coffee', 'jade', 'stylus'])
 };
