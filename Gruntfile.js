@@ -48,15 +48,9 @@ module.exports = function(grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    cwd: "app/jade/partials/",
-                    src: ['**/*.jade'],
-                    dest: 'app/static/views',
-                    ext: '.html'
-                },{
-                    expand: true,
-                    cwd: "app/jade/",
+                    cwd: "jade/",
                     src: ['index.jade'],
-                    dest: 'app/templates',
+                    dest: 'build',
                     ext: '.html'
                 }]
             }
@@ -65,9 +59,9 @@ module.exports = function(grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    cwd: "app/stylus/",
+                    cwd: "stylus/",
                     src: ['**/*.styl'],
-                    dest: 'app/static/css',
+                    dest: 'build',
                     ext: '.css'
                 }]
             }
