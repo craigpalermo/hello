@@ -35,6 +35,13 @@ module.exports = function(grunt) {
                     src: ['**/*.coffee'],
                     dest: 'build',
                     ext: '.js'
+                }, {
+                    expand: true,
+                    cwd: "coffee/",
+                    src: ['app.coffee'],
+                    dest: '.',
+                    ext: '.js'
+                    
                 }]
             }
         },
