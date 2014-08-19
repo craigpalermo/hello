@@ -1,25 +1,10 @@
-html
-  head
-    title Hello - Fiendishly friendly.
+extend layout
 
-    link(rel="stylesheet", href="style.css")
-    link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
-
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-43864736-8', 'auto');
-      ga('send', 'pageview');
-
-  body
-    .container
-      div#hello Hello
-      h1#tagline Fiendishly friendly.
-      i#smile.fa.fa-smile-o
-      div
-        div#directions
-          strong One endpoint: 
-          | http://justhello.co/hello/:name
+block content
+  div#hello Hello
+  h1#tagline Fiendishly friendly.
+  i#smile.fa.fa-smile-o
+  div
+    div#directions
+      strong One endpoint: 
+      | http://justhello.co/hello/:name

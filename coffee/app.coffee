@@ -31,7 +31,7 @@ home = (req, res) ->
 hello = (req, res) ->
   name = req.param("name")
   name = name.charAt(0).toUpperCase() + name.slice(1)
-  res.send "Hello, #{name}."
+  res.render('hello', {'message': "Hello, #{name}."})
 
 # Routes
 app.get('/', home)
